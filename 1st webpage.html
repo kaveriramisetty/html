@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Course Registration</title>
+</head>
+<body>
+  <h1>Free Course Registration</h1>
+
+  <!-- Added an image banner -->
+  <img src="images/download.jpeg" alt="Free Course Banner" width="300" height="300">
+  <br><br>
+
+  <!-- Added a link to free resources -->
+  <p>Check out more free learning resources at 
+    <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+  </p>
+
+  <!-- Added an unordered list -->
+  <h3>Why join this course?</h3>
+  <ul>
+    <li>Completely free of cost</li>
+    <li>Beginner-friendly content</li>
+    <li>Flexible schedule options</li>
+  </ul>
+
+  <!-- Added an ordered list -->
+  <h3>How to Register</h3>
+  <ol>
+    <li>Fill in your personal details</li>
+    <li>Select your course and start date</li>
+    <li>Agree to the terms and submit the form</li>
+  </ol>
+
+  <form>
+
+    <fieldset>
+      <legend>Personal details</legend>
+
+      <p>
+        <label for="fullName">Full name:</label><br>
+        <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+      </p>
+
+      <p>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </p>
+
+      <p>
+        <label for="phone">Phone (digits only):</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="1234567890">
+      </p>
+
+      <p>
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other"> <label for="other">Other</label>
+      </p>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Course selection</legend>
+
+      <p>
+        <label for="course">Choose a course:</label><br>
+        <select id="course" name="course" required>
+          <option value="">-- Select a course --</option>
+          <option value="html">HTML Basics</option>
+          <option value="css">CSS Fundamentals</option>
+          <option value="js">JavaScript Essentials</option>
+          <option value="python">Python for Beginners</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="startDate">Preferred start date (Available slots shown on click):</label><br>
+        <input type="date" id="startDate" name="startDate" onclick="alert('Available slots: 9:00 AM, 11:00 AM, 2:00 PM')">
+      </p>
+
+      <p>
+        <label>Mode:</label><br>
+        <input type="radio" id="modeOnline" name="mode" value="online" checked>
+        <label for="modeOnline">Online</label>
+        <input type="radio" id="modeOffline" name="mode" value="offline">
+        <label for="modeOffline">Offline</label>
+      </p>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Additional information</legend>
+
+      <p>
+        <label for="experience">Prior experience (brief):</label><br>
+        <textarea id="experience" name="experience" rows="4" cols="40" placeholder="e.g. none, some HTML"> </textarea>
+      </p>
+
+      <p>
+        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+        <label for="newsletter">Subscribe to course updates and newsletter</label>
+      </p>
+
+      <p>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions</label>
+      </p>
+
+    </fieldset>
+
+    <p>
+      <button type="submit">Register for free course</button>
+      <button type="reset">Reset</button>
+    </p>
+
+  </form>
+</body>
+</html>
